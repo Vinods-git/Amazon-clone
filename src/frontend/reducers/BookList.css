@@ -1,0 +1,116 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* App Styles */
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Form Styles */
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+form input,
+form button {
+  width: 100%;
+}
+
+form input {
+  padding: 10px;
+  margin: 4px 0 14px 0;
+  border: 1px solid #eee;
+}
+
+form button {
+  background: #36304a;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 14px 0;
+  margin: 5px 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 400ms ease-in-out;
+}
+
+form button:focus {
+  background: #6c5d9e;
+}
+
+/* Table Styles */
+
+.table .tableHeading {
+  background: #36304a;
+  color: #fff;
+}
+
+.table .tableRow {
+  border: 1px solid #eee;
+  color: #000;
+}
+
+.table .tableHeading,
+.table .tableRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableField {
+  width: 200px;
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+.tableField:last-of-type {
+  width: 110px;
+  text-align: right;
+}
+
+.tableField i {
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+/* Media Queries */
+
+@media (max-width: 530px) {
+  .table,
+  form label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 830px) {
+  .App {
+    padding: 20px 10px;
+  }
+  .tableField,
+  .tableField:last-of-type {
+    width: 25%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+}
