@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './JSPreperaton';
+import App from './frontend/App';
 
 import reportWebVitals from './reportWebVitals';
 
