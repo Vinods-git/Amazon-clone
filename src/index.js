@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './frontend/App';
+import {Provider} from 'react-redux';
+import { storeForAmazon } from "./storeForAmazon";
+
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <App />,
+  <Provider store={storeForAmazon}>
+    <App />
+  </Provider>
+  ,
 
   document.getElementById('root')
 );

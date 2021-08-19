@@ -1,22 +1,22 @@
-import Cookies from 'js-cookie';
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import Cookies from "js-cookie";
+import { createStore, combineReducers, compose, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import {
   productDeleteReducer,
-  productSaveReducer,
-} from './frontend/reducers/productReducers';
+  productSaveReducer
+} from "./frontend/reducers/productReducers";
 import {
   userRegisterReducer,
-  userSigninReducer,
-} from './frontend/reducers/userReducer';
-import { cartReducer } from './reducers/cartReducer';
+  userSigninReducer
+} from "./frontend/reducers/userReducer";
+import { cartReducer } from "./frontend/reducers/cartReducer";
 import {
   productDetailsReducer,
-  productListReducer,
-} from './reducers/productReducers';
+  productListReducer
+} from "./frontend/reducers/productReducers";
 
-const cartItems = Cookies.getJSON('cartItems') || [];
-const userInfo = Cookies.getJSON('userInfo') || null;
+const cartItems = [];
+const userInfo = null;
 
 const initialState = { cart: { cartItems }, userSignin: { userInfo } };
 
@@ -27,7 +27,7 @@ const reducer = combineReducers({
   userRegister: userRegisterReducer,
   productSave: productSaveReducer,
   productDelete: productDeleteReducer,
-  userSignin: userSigninReducer,
+  userSignin: userSigninReducer
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const storeForAmazon = createStore(
